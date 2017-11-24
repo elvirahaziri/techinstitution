@@ -6,97 +6,117 @@
 </link>
 <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
 </link>
-<script type="text/javascript" src="js/script.js"></script>
+
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </head>
 <style>
 body{
-background-color:#F0E68C ;
+background-color:#58D68D;
 font-family:Arial;
 }
 h3{
 color:#D35400 ;
 text-align:left;
+}
+h1{
+color:#D35400;
+text-align:left;
 
 font-family:serif;
 }
+hr{
+border-width:4px;
+width:600px;
+}
 </style>
 <body><br>
-.
 
-  <h3>Forma e regjistrimit të pikave kufitare </h3>
 
+
+<div class="row">
+<div class="col-xs-offset-3 col-cs-8">
+<h1>Forma e regjistrimit të pikave kufitare </h1>
 <div class="container">
 <div class="col-xs-6">
-<form class ="form-horizontal">
+<form class ="form-horizontal"id="border-wait-form">
+<input type="hidden" id="datetime-now"/>
  
- <div class="form-group">
- <label for="Pika- kufitare" class="col-xs-8">  Pika Kufitare:  </label><br>
- <div class="col-xs-10">
-	<select name=“pikenKufitare" >
-	<option value=" ">Zgjedh piken kufitare
-<option value=“Vermice">Vërmicë</option>
-<option value=“Qafe e prushit">Qafë e prushit</option>
-<option value="Qafë e Morinës">Qafë e Morinës</option>
-<option value="Kullë">Kullë</option>
-<option value="Bërnjak">Bërnjak</option>
-<option value="Jarinje">Jarinje</option>
-<option value="Merdarë">Merdarë</option>
-<option value="Mutivode">Mutivodë</option>
-<option value="Dheu i Bardhë">Dheu i Bardhë</option>
-<option value="Muçibabë">Muçibabë</option>
-<option value="Hani i Elezit">Hani i Elezit	</option>
-<option value="Glloboqicë	">Glloboqicë	</option>
-</div>
-</div>
+ <div class="form-group" " form-style-group">
+ <label for="Pika-kufitare" class="control-label col-xs-3"id="pikakufitare">Pika kufitare:</label>
+ <div class="col-xs-5">
+	<select name=“pikenKufitare" id="pika-kufitare"name="pika-kufitare" class="form-control">
+	<option disabled selected hidden =" ">Zgjedh piken kufitare
+<option value="vermice">Vërmicë</option>
+<option value="qafë e prushit">Qafë e Prushit</option>
+<option value="qafë e Morinës">Qafë e Morinës</option>
+<option value="kullë">Kullë</option>
+<option value="bërnjak">Bërnjak</option>
+<option value="jarinje">Jarinje</option>
+<option value="merdarë">Merdarë</option>
+<option value="mutivode">Mutivodë</option>
+<option value="dheu i Bardhë">Dheu i Bardhë</option>
+<option value="muçibabë">Muçibabë</option>
+<option value="hani i Elezit">Hani i Elezit	</option>
+<option value="glloboqicë	">Glloboqicë	</option>
 </select>
+</div>
+</div>
+
 <hr>
  <h3>Hyrje</h3><br /><br />
 
- <div class="form-group">
+ <div class="form-group" "form-style-group">
  <label for="maximum">Minimum</label>
- <input type="text" class=".col-md-3" class="form-control"id="hyrja-min"><strong>minuta</strong></input>
+ <input type="number" min="0" max="59" class=".col-md-3" class="form-control"id="hyrje-min-minuta"name="hyrja-min-minuta">
+ <span><strong>minuta</strong></input></span>
 </div>
 <div class="form-group">
  <label for="maximum">Maximum</label>
- <input type="text" class=".col-md-3" class="form-control"id="hyrja-max"><strong>minuta</strong></input>
+ <input type="number" min="0" max="59"class=".col-md-3" class="form-control"id="hyrje-max-minuta"name="hyrja-max-minuta"><span><strong>minuta</strong></input></span>
 </div>
 <hr>
 <h3>Dalje</h3><br><br>
 <div class="form-group">
 <label for="minimum">Minimum </label>
- <input type="text" class=".col-md-3"class="form-control"id="Dalje"><strong>minuta</strong></input>
+ <input type="number" min="0" max="59"class=".col-md-3"class="form-control"id="dalje-min-minuta"name="dalje-min-minuta">
+ <span><strong>minuta</strong></input></span>
  </div>
  <div class="form-group">
  <label for="maximum">Maximum</label>
- <input type="text" class=".col-md-3"class="form-control" id="dalje"><strong>minuta</strong></input>
+ <input type="number" min="0" max="59" class=".col-md-3"class="form-control" id="dalje-max-minuta"name="dalje-max-minuta">
+ <span><strong>minuta</strong></input></span>
 </div>
 <hr>
 <h3>Hyrje</h3><br><br>
 <div class="form-group">
 <label for="minimum">Minimum </label>
- <input type="text" class=".col-md-3"class="form-control"id="Hyrja"><strong>metra</strong></input>
+ <input type="number"min="0"class=".col-md-3"class="form-control"id="hyrje-min-metra"name="hyrja-min-minuta">
+ <span><strong>metra</strong></input></span>
 </div>
 <div class="form-group">
  <label for="maximum">Maximum</label>
- <input type="text" class=".col-md-3" class="form-control"id="hyrja-max"><strong>metra</strong></input><br><br>
+ <input type="number" min="0"class=".col-md-3" class="form-control"id="hyrje-max-metra"name="hyrja-max-minuta">
+ <span><strong>metra</strong></input></span><br><br>
  <hr>
  <h3>Dalje</h3><br><br>
 <div class="form-group">
 <label for="minimum">Minimum </label>
- <input type="text" class=".col-md-3"class="form-control"id="Dalje"><strong>metra</strong></input>
+ <input type="number"min="0" class=".col-md-3"class="form-control"id="dalje-min-metra"name="dalje-min-metra">
+ <span><strong>metra</strong></input></span>
  </div>
  <div class="form-group">
  <label for="maximum">Maximum</label>
- <input type="text" class=".col-md-3"class="form-control" id="dalje"><strong>metra</strong></input>
+ <input type="number"min="0" class=".col-md-3"class="form-control" id="dalje-max-metra"name="dalje-max-metra">
+ <span><strong>metra</strong</input></span>
 </div>
  
 <hr>
 
- <button type="button" class="btn btn-primary btn-lg">Dergo</button>
-  <button type="button" class="btn btn-primary btn-lg" >Fshij</button>
- 
+ <button type="submit" class="btn btn-primary btn-lg">Dergo</button>
+ <button type="submit" class="btn btn-primary btn-lg" >Fshij</button>
+ </div>
 </form>
 </body>
 </html>
